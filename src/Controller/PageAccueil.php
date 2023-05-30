@@ -10,14 +10,7 @@ class PageAccueil extends AbstractController
     #[Route('/page', name: 'page_home')]
     public function home()
     {
-        echo "coucou";
-        die();
+        return $this->render('page/home.html.twig');
     }
 
-    #[Route('/test', name: 'page_test')]
-    public function test()
-    {
-        echo "test";
-        die();
-    }
 }
