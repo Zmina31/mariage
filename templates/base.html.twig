@@ -6,18 +6,27 @@
           content="width=device-width, user-scalable=yes, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %}La lumière du bonheur{% endblock %}</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https : //fonts.googleapis.com/css2?family= Crimson +Text:ital@1 & family= Playfair:wght@300 & display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
+    <link rel="icon">
+
 </head>
 <body>
-<header>
-    <h1>La lumière du bonheur</h1>
-    {% include('inc/nav.html.twig') %}
-</header>
-<main>
-    {% block body %}{% endblock %}
-</main>
-<footer>
-    {% include('inc/nav.html.twig') %}
-    <div>&copy; {{ "now"|date("Y") }} La lumière du bonheur</div>
-</footer>
+    <div class="container">
+        <header>
+        <h1><a href="{{ path('page_home') }}"><img src="{{ asset('css/img/logo1.png') }}" alt="La lumiere du bonheur"></h1>
+            {% include('inc/nav.html.twig') %}
+        </header>
+        <main>
+            {% block body %}{% endblock %}
+        </main>
+        <footer>
+            {% include('inc/nav.html.twig') %}
+            <div>&copy; {{ "now"|date("Y") }} La lumière du bonheur</div>
+        </footer>
+    </div>
 </body>
 </html>

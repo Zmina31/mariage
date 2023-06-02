@@ -1,0 +1,57 @@
+body{
+   background-color: #ffffff;
+   background-attachment: fixed;
+   color:#0f0f0e;
+   font-family: 'Crimson Text', Serif;
+}
+
+.container{
+   max-width: 1000px;
+   margin: auto;
+   padding: 5px;
+   text-align: center; /*Logo centre*/
+}
+
+a {
+   color: #ff7f9c; /* Couleur des liens */
+   text-decoration: none;
+}
+
+a:hover {
+   color: #ff7f9c;
+}
+
+.button:hover {
+   background-color: #e75a83; /* Couleur des boutons au survol */
+}
+
+
+img {
+   max-width: 100%;
+}
+
+body > .container{
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+}
+
+header img{
+   height: 100px; /*Logo*/
+}
+
+main{
+   flex: 1;
+}
+
+nav ul {
+   display: flex;
+   list-style: none;
+   padding-left: 0;
+}
+
+nav li {
+   margin-right: 1rem;
+}
+
+
