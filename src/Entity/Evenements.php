@@ -15,31 +15,30 @@ class Evenements
     private ?int $id = null;
 
     #[ORM\Column(type: Types::DATE_MUTABLE)]
-    private ?\DateTimeInterface $Date = null;
+    private ?\DateTimeInterface $date = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $Ville = null;
+    private ?string $ville = null;
 
     #[ORM\Column]
-    private ?int $Invites = null;
+    private ?int $invite = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $Destination = null;
+    private ?string $destination = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $Prestation = null;
+    private ?string $prestation = null;
 
     #[ORM\Column]
-    private ?int $Budget = null;
+    private ?float $budget = null;
 
-    #[ORM\Column(type: Types::TEXT, nullable: true)]
-    private ?string $Precisions = null;
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $precisions = null;
 
     #[ORM\Column]
-    private ?bool $Confirmation = null;
+    private ?bool $valider = null;
 
-    #[ORM\OneToOne(inversedBy: 'evenement', cascade: ['persist', 'remove'])]
-    #[ORM\JoinColumn(nullable: false)]
+    #[ORM\OneToOne(cascade: ['persist', 'remove'])]
     private ?Utilisateurs $utilisateur = null;
 
     public function getId(): ?int
@@ -49,96 +48,96 @@ class Evenements
 
     public function getDate(): ?\DateTimeInterface
     {
-        return $this->Date;
+        return $this->date;
     }
 
-    public function setDate(\DateTimeInterface $Date): self
+    public function setDate(\DateTimeInterface $date): self
     {
-        $this->Date = $Date;
+        $this->date = $date;
 
         return $this;
     }
 
     public function getVille(): ?string
     {
-        return $this->Ville;
+        return $this->ville;
     }
 
-    public function setVille(string $Ville): self
+    public function setVille(string $ville): self
     {
-        $this->Ville = $Ville;
+        $this->ville = $ville;
 
         return $this;
     }
 
-    public function getInvites(): ?int
+    public function getInvite(): ?int
     {
-        return $this->Invites;
+        return $this->invite;
     }
 
-    public function setInvites(int $Invites): self
+    public function setInvite(int $invite): self
     {
-        $this->Invites = $Invites;
+        $this->invite = $invite;
 
         return $this;
     }
 
     public function getDestination(): ?string
     {
-        return $this->Destination;
+        return $this->destination;
     }
 
-    public function setDestination(string $Destination): self
+    public function setDestination(string $destination): self
     {
-        $this->Destination = $Destination;
+        $this->destination = $destination;
 
         return $this;
     }
 
     public function getPrestation(): ?string
     {
-        return $this->Prestation;
+        return $this->prestation;
     }
 
-    public function setPrestation(string $Prestation): self
+    public function setPrestation(string $prestation): self
     {
-        $this->Prestation = $Prestation;
+        $this->prestation = $prestation;
 
         return $this;
     }
 
-    public function getBudget(): ?int
+    public function getBudget(): ?float
     {
-        return $this->Budget;
+        return $this->budget;
     }
 
-    public function setBudget(int $Budget): self
+    public function setBudget(float $budget): self
     {
-        $this->Budget = $Budget;
+        $this->budget = $budget;
 
         return $this;
     }
 
     public function getPrecisions(): ?string
     {
-        return $this->Precisions;
+        return $this->precisions;
     }
 
-    public function setPrecisions(string $Precisions): self
+    public function setPrecisions(?string $precisions): self
     {
-        $this->Precisions = $Precisions;
+        $this->precisions = $precisions;
 
         return $this;
     }
 
-    public function isConfirmation(): ?bool
+    public function isValider(): ?bool
     {
-        return $this->Confirmation;
+        return $this->valider;
     }
 
-    public function setConfirmation(bool $Confirmation): self
+    public function setValider(bool $valider): self
     {
-        $this->Confirmation = $Confirmation;
+        $this->valider = $valider;
 
         return $this;
     }
@@ -148,7 +147,7 @@ class Evenements
         return $this->utilisateur;
     }
 
-    public function setUtilisateur(Utilisateurs $utilisateur): self
+    public function setUtilisateur(?Utilisateurs $utilisateur): self
     {
         $this->utilisateur = $utilisateur;
 

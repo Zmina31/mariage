@@ -14,19 +14,16 @@ class Utilisateurs
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $Nom = null;
+    private ?string $nom = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $Prenom = null;
+    private ?string $prenom = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $Email = null;
+    private ?string $email = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $Telephone = null;
-
-    #[ORM\OneToOne(mappedBy: 'utilisateur', cascade: ['persist', 'remove'])]
-    private ?Evenements $evenement = null;
+    private ?string $telephone = null;
 
     public function getId(): ?int
     {
@@ -35,65 +32,48 @@ class Utilisateurs
 
     public function getNom(): ?string
     {
-        return $this->Nom;
+        return $this->nom;
     }
 
-    public function setNom(string $Nom): self
+    public function setNom(string $nom): self
     {
-        $this->Nom = $Nom;
+        $this->nom = $nom;
 
         return $this;
     }
 
     public function getPrenom(): ?string
     {
-        return $this->Prenom;
+        return $this->prenom;
     }
 
-    public function setPrenom(string $Prenom): self
+    public function setPrenom(string $prenom): self
     {
-        $this->Prenom = $Prenom;
+        $this->prenom = $prenom;
 
         return $this;
     }
 
     public function getEmail(): ?string
     {
-        return $this->Email;
+        return $this->email;
     }
 
-    public function setEmail(string $Email): self
+    public function setEmail(string $email): self
     {
-        $this->Email = $Email;
+        $this->email = $email;
 
         return $this;
     }
 
     public function getTelephone(): ?string
     {
-        return $this->Telephone;
+        return $this->telephone;
     }
 
-    public function setTelephone(string $Telephone): self
+    public function setTelephone(string $telephone): self
     {
-        $this->Telephone = $Telephone;
-
-        return $this;
-    }
-
-    public function getEvenement(): ?Evenements
-    {
-        return $this->evenement;
-    }
-
-    public function setEvenement(Evenements $evenement): self
-    {
-        // set the owning side of the relation if necessary
-        if ($evenement->getUtilisateur() !== $this) {
-            $evenement->setUtilisateur($this);
-        }
-
-        $this->evenement = $evenement;
+        $this->telephone = $telephone;
 
         return $this;
     }
