@@ -11,6 +11,7 @@ class PrestationsController extends AbstractController
     #[Route('/prestations', name: 'prestations_list')]
     public function list(): Response
     {
+        //todo: aller chercher les prestations dans la bdd
 
         return $this->render('prestations/list.html.twig', [
 
@@ -22,6 +23,15 @@ class PrestationsController extends AbstractController
         //todo: aller chercher la prestation dans la bdd
 
         return $this->render('prestations/details.html.twig', [
+
+        ]);
+    }
+    #[Route('/prestations/create', name: 'prestations_create')]
+    public function create(): Response
+    {
+        //todo: aller chercher la prestation dans la bdd
+
+        return $this->render('prestations/create.html.twig', [
 
         ]);
     }
