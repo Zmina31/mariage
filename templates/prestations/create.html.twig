@@ -6,7 +6,10 @@ Create a new prestation | {{ parent() }}
 
 {% block body %}
 <div>
-    {# todo: afficher formulaire de creation uniquement visible admin #}
+    {{form_start(prestationForm)}}
+    {{form_widget(prestationForm)}}
+    <button>Valider</button>
+    {{form_end(prestationForm)}}
 </div>
 {% endblock %}
 

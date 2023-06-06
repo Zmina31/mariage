@@ -1,9 +1,16 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    <section class="prestations-list">
 <h1>Les Préstations</h1>
     <section>
-        todo:afficher les préstations
+        {% for prestation in  prestations %}
+        <article>
+            <a href="{{ path('prestations_details', {'id': prestation.id}) }}" title="View presta details">
+                <img src="{{ asset('css/img/posters/6390347ba5db8cf3749963eb82251288.jpg'~ prestation.paragraphe) }}" alt="{{ prestation.name }}">
+            </a>
+        </article>
+        {% endfor %}
     </section>
 
 {% endblock %}
