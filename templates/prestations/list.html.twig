@@ -1,22 +1,47 @@
 {% extends 'base.html.twig' %}
 
+
 {% block body %}
-    <section class="prestations-list">
-<h1>Les Préstations</h1>
-    <section>
-        {% for prestation in  prestations %}
-        <article>
-            <a href="{{ path('prestations_details', {'id': prestation.id}) }}" title="View presta details">
-                <img src="{{ asset('css/img/posters/6390347ba5db8cf3749963eb82251288.jpg'~ prestation.paragraphe) }}" alt="{{ prestation.name }}">
-            </a>
-        </article>
-        {% endfor %}
-    </section>
+
+    <h1 class="pres-title">Les Préstations</h1>
+    <div class="presto-container">
+        <div class="presto">
+            <h2 class="presto-title">Prestation Luxury</h2>
+            <p class="presto-description">La formule « Luxury » est notre formule d’organisation de mariage la plus haut de gamme. Vos envies n’auront aucune limite.
+
+                C’est une formule illimitée qui correspond à des mariages nécessitant une importante organisation et/ou ayant un nombre conséquent d’invités.
+                Ainsi, quelque soit votre type de mariage, vous pourrez tout oser grâce à l’accompagnement personnalisé et sans limite de votre wedding planner !
+                En choisissant notre formule Luxury, vous avez accès à un nombre infini de choix de prestataires ainsi qu’un nombre illimité de rendez-vous avec votre wedding planner.
+                Vous bénéficierez également du nombre de coordinatrices dont vous aurez besoin pour votre jour j. De quoi profiter sans se soucier !
+                N’hésitez plus à confier le plus beau jour de votre vie à l’une de nos expertes en organisation de mariage !</p>
+        </div>
+        <div class="presto">
+            <h2 class="presto-title">Prestation Prestige</h2>
+            <p class="presto-description">Une organisation de mariage complète jusqu’à la coordination du jour J
+
+                La formule « Prestige » est une formule d’organisation de mariage complète et sur-mesure. Elle s’adresse aux futurs mariés qui souhaitent bénéficier d’une organisation globale, sans les soucis d’une planification longue et stressante.
+                Après un premier rendez-vous avec une de nos wedding planners pour définir vos attentes, nous vous proposons, organisons et coordonnons votre mariage.
+                Vous vous déchargez de toutes les contraintes et profitez d’un mariage à votre image !</p>
+        </div>
+        <div class="presto">
+            <h2 class="presto-title">Prestation Evasion</h2>
+            <p class="presto-description">La formule « Evasion » : l’organisation de votre mariage à l’étranger.
+
+                Et pourquoi ne pas coupler mariage et voyage de noces en un même événement ?
+                Que ce soit les pieds dans l’eau ou à l’autre bout du monde, les mariages à l’étranger sont l’occasion de vous dire OUI dans un cadre hors du commun et de créer un souvenir unique pour vous et vos invités.
+
+                Nous nous engageons à répondre à vos envies et à créer un mariage à l’étranger comme vous l’imaginez.
+                De la recherche du lieu jusqu’à la coordination du jour J selon votre besoin, notre équipe saura vous accompagner, afin que vous profitiez au maximum de ce jour exceptionnel.
+                Que ce soit pour un Elopement en tête à tête  ou un mariage avec vos proches, nous nous entourerons de professionnels qui rendront votre mariage inoubliable.
+
+                Vous n’avez plus qu’à choisir votre destination de rêve et vous dire OUI !</p>
+        </div>
+    </div>
 
 {% endblock %}
 
 {% block title %}
-Les Préstations |{{ parent() }}
+    Les Préstations |{{ parent() }}
 
 {% endblock %}
 

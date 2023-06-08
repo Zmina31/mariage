@@ -53,4 +53,29 @@ class PrestationsController extends AbstractController
 
         ]);
     }
+    public function prestationsAction(EntityManagerInterface $entityManager)
+    {
+        // Création des instances de Prestation
+        $prestation1 = new Prestations();
+        $prestation1->setTitre("Prestation Luxury");
+        $prestation1->setParagraphe("La formule Luxury est...");
+        $prestation1->setPrix(50000);
+
+        $prestation2 = new Prestations();
+        $prestation2->setTitre("Prestation Prestige");
+        $prestation2->setParagraphe("Une organisation de mariage complète...");
+        $prestation2->setPrix(10000);
+
+        $prestation3 = new Prestations();
+        $prestation3->setTitre("Prestation Evasion");
+        $prestation3->setParagraphe("La formule Evasion : l'organisation de votre mariage à l'étranger...");
+        $prestation3->setPrix(6000);
+
+        // Persister les objets dans la base de données
+        $entityManager->persist($prestation1);
+        $entityManager->persist($prestation2);
+        $entityManager->persist($prestation3);
+        $entityManager->flush();
+
+    }
 }

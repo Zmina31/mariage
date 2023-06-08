@@ -1,19 +1,19 @@
-body{
+body {
    background-color: #ffffff;
    background-attachment: fixed;
-   color:#0f0f0e;
-   font-family: 'Crimson Text', Serif;
+   color: #0f0f0e;
+   font-family: 'Crimson Text', serif;
 }
 
-.container{
+.container {
    max-width: 1000px;
    margin: auto;
    padding: 5px;
-   text-align: center; /*Logo centre*/
+   text-align: center;
 }
 
 a {
-   color: #ff7f9c; /* Couleur des liens */
+   color: #ff7f9c;
    text-decoration: none;
 }
 
@@ -22,25 +22,24 @@ a:hover {
 }
 
 .button:hover {
-   background-color: #e75a83; /* Couleur des boutons au survol */
+   background-color: #e75a83;
 }
-
 
 img {
    max-width: 100%;
 }
 
-body > .container{
+body > .container {
    display: flex;
    flex-direction: column;
    min-height: 100vh;
 }
 
-header img{
-   height: 100px; /*Logo*/
+header img {
+   height: 100px;
 }
 
-main{
+main {
    flex: 1;
 }
 
@@ -54,8 +53,62 @@ nav li {
    margin-right: 1rem;
 }
 
-.prestations-list {
+.presto-container {
+   background-color: beige;
+   padding: 20px;
+}
+
+.presto {
+   background-color: #f8f8f8;
+   border-radius: 4px;
+   padding: 20px;
+   margin-bottom: 20px;
+}
+
+.presto-title {
+   color: #ff7f9c;
+}
+
+.presto-description {
+   color: #555;
+}
+
+.pres-title {
+   color: #ff7f9c;
+}
+
+h1 {
+font-family: 'Italianno', cursive;
+   font-weight: normal;
+   font-size: 50px;
 
 }
 
+label{
+   display: block;
+}
 
+input,
+textarea,
+select {
+   margin-bottom: 1rem;
+   box-sizing: border-box;
+   width: 50%;
+   min-width: 150px;
+}
+
+.img_acc{
+   max-width: 100%;
+   min-width: 150px;
+}
+.apropos {
+   font-size: 20px;
+}
+.img-apropos{
+   float: left;
+   width: 30%;
+}
+
+.youtube{
+   position: relative;
+}

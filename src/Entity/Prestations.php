@@ -21,7 +21,7 @@ class Prestations
     private ?int $prix = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $name = null;
+    private ?string $titre = null;
 
     public function getId(): ?int
     {
@@ -52,14 +52,14 @@ class Prestations
         return $this;
     }
 
-    public function getName(): ?string
+    public function getTitre(): ?string
     {
-        return $this->name;
+        return $this->titre;
     }
 
-    public function setName(string $name): self
+    public function setTitre(string $titre): self
     {
-        $this->name = $name;
+        $this->titre = $titre;
 
         return $this;
     }

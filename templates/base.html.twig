@@ -8,16 +8,23 @@
     <title>{% block title %}La lumière du bonheur{% endblock %}</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https : //fonts.googleapis.com/css2?family= Crimson +Text:ital@1 & family= Playfair:wght@300 & display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&family=Italianno&family=Playfair:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
     <link rel="icon">
 
 </head>
 <body>
+
     <div class="container">
         <header>
-        <h1><a href="{{ path('page_home') }}"><img src="{{ asset('css/img/logo1.png') }}" alt="La lumiere du bonheur"></h1>
+            <h1><a href="{{ path('page_home') }}"><img src="{{ asset('css/img/logo1.png') }}" alt="La lumiere du bonheur"></a></h1>
             {% include('inc/nav.html.twig') %}
         </header>
         <main>
